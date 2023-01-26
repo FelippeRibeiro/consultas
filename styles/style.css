@@ -3,18 +3,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 10%;
+  margin: auto;
+  position: relative;
 }
 #main-cnpj {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 10%;
+  margin: auto;
+  position: relative;
 }
 
 body {
-  padding: 50px;
+  display: flex;
 }
 
 input {
