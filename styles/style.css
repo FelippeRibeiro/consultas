@@ -1,0 +1,32 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+#main-cnpj {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+body {
+  padding: 50px;
+}
+
+input {
+  border-radius: 15px;
+  text-align: center;
+  font-size: large;
+}
+
+.btn.btn-primary {
+  margin: 10px;
+}
+.btn.btn-primary:hover {
+  margin: 10px;
+  transform: scale(1.05);
+}
