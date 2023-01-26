@@ -1,9 +1,15 @@
 let result = document.getElementById("resultado");
 let search = document.getElementById("searchData");
 let submit = document.getElementById("submit");
-let oldElements = [];
 
-submit.addEventListener("click", async () => {
+submit.addEventListener("click", buscar);
+search.addEventListener("keypress", (key) => {
+  if (key.key == "Enter") {
+    buscar();
+  }
+});
+
+async function buscar() {
   let data = search.value;
   await fetch(`https://viacep.com.br/ws/${data}/json/`)
     .then((res) => {
@@ -13,7 +19,6 @@ submit.addEventListener("click", async () => {
         }
         let ul = document.createElement("ul");
         result.appendChild(ul);
-        oldElements.push(ul);
 
         Object.keys(res).forEach((el) => {
           let li = document.createElement("li");
@@ -26,4 +31,4 @@ submit.addEventListener("click", async () => {
     .catch((er) => {
       alert(`Erro ${er}`);
     });
-});
+}
